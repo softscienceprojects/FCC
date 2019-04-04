@@ -11,18 +11,13 @@ Return the resulting array. The input arrays should remain the same after the fu
 
 function frankenSplice(arr1, arr2, n) {
   // It's alive. It's alive!
-  var myArray = arr2.slice(0, n)// .concat(arr1);
-  var scary = arr2.slice(n, arr2.length);
-  myArray.push(arr1, scary);
-  
-  console.log(myArray);
+  let copyArr = arr2.slice();
+  //copyArr.push(arr2);
+  let myArray = arr2.slice(0, n).concat(arr1);
+  copyArr.splice(n, 0, arr1);
+ 
+  console.log(copyArr);
   return myArray;
-  
 }
 
-frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2); 
-
-
-
-
-// "head", "shoulders", "claw", "tentacle", "knees", "toes"
+frankenSplice([1, 2, 3], [4, 5], 1);
