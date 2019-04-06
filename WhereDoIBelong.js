@@ -17,15 +17,16 @@ function getIndexToIns(arr, num) {
   // Find my place in this sorted array.
   //sort the array small to large
 
-  arr.sort((a,b) => a-b);
+  arr.sort((a,b) => a-b); // have to use this method for sorting otherwise JS thinks #'s go 1,10,2, etc. 
+  //by default .sort sorts as strings (alphabetical) so pass in *compare function* 
 
-  for (let i=0;i<arr.length;i++) {
-    if (num<=arr[i]) {
+  for (let i=0;i<arr.length;i++) { //loop through your array 
+    if (num<=arr[i]) { //compare each item in the array. Is Num <= to the arr item?
     //console.log(arr.indexOf(arr[i]));
-    return arr.indexOf(arr[i]);
+    return arr.indexOf(arr[i]); //then return the index of where the array item is
     }
   }
-  return arr.length;
+  return arr.length; //OUTSIDE OF THE SCOPE -- just return the length of the array
 }
 
 getIndexToIns([2, 5, 10], 15); 
