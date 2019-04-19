@@ -10,20 +10,20 @@ function translatePigLatin(str) {
   if (str.charAt(0)==firstVowel) {
     ourSolution = str + "way";
   }
-
   // Does not have a vowel? look through the word, find the first vowel! 
     else {
   // at what index are the values found? 
 for (let i =0; i<str.length;i++) {
   if (str.charAt(i) == allVowels) {
    // take off the letters before the vowel
-    console.log(i);
-  }
-};
- 
+    var consStart = str.slice(i-str.charAt(i), i);
+    var consEnding = str.slice(i);
+  } 
+} console.log(consEnding);
     // put them at the end
     // add -ay
     }
+  
   
   console.log(ourSolution);
   return ourSolution;
