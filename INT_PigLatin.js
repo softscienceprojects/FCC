@@ -12,15 +12,14 @@ function translatePigLatin(str) {
   }
   // Does not have a vowel? look through the word, find the first vowel! 
     else {
-  // at what index are the values found? 
-for (let i =0; i<str.length;i++) {
-  if (str.charAt(i) == allVowels) {
-   // take off the letters before the vowel
-    var consStart = str.slice(i-str.charAt(i), i);
-    var consEnding = str.slice(i);
-  } 
-} console.log(consEnding);
-    // put them at the end
+        // at what index are the values found? 
+      for (let i =0; i<str.length;i++) {
+        if (str.charAt(i) == allVowels) {
+        // take off the letters before the vowel
+          var consStart = str.slice(i-str.charAt(i), i);
+          var consEnding = str.slice(i);
+        } // put them at the end
+      } ourSolution = consEnding + consStart+"ay";
     // add -ay
     }
   
