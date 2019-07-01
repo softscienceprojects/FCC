@@ -10,11 +10,14 @@ For example, sumFibs(10) should return 10 because all odd
 Fibonacci numbers less than or equal to 10 are 1, 1, 3, and 5. */
 
 function sumFibs(num) {
-  var holdarr = []
- 
-  console.log(num%2)
-  //return num;
- 
+  var myArr = [1,1];
+
+  for (let i=1;i<=num; i++) {
+    var counter = myArr[i] + (myArr[i-1])
+    myArr.push(counter);
+  }
+  console.log(myArr)
+  return num;
 }
  
 sumFibs(9);
