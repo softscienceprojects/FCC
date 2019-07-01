@@ -15,7 +15,7 @@ function uniteUnique(arr) {
    for (let j=0; j<arguments[i].length; j++) {
     //console.log(arguments[i][j])
     if (newArr.includes(arguments[i][j])) {
-      console.log("boo")
+      console.log("boo") //continue?
     } else {
       newArr.push(arguments[i][j])
     }
